@@ -1,21 +1,21 @@
-#import "../functions.typ": theorem, defenition, equ
+#import "../functions.typ": theorem, definition, equ
 = Тригонометрическая система, Ортогональность тригонометрической системы и свойства интеграла от периодической функции
 
-#defenition(breakline: true)[Функциональный ряд:
+#definition(breakline: true)[Функциональный ряд:
 
   #equ($ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $, id: <eq:eq29>)
 
   назывется *тригонометрическим рядом*, а числа $a_0, a_n, b_n$ --- его коэффициенты.
 ]
 
-#defenition(breakline: true)[Функции, входящие в состав тригонометрического ряда:
+#definition(breakline: true)[Функции, входящие в состав тригонометрического ряда:
 
   #equ($ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $, id: <eq:eq30>)
 
   образуют *тригонометрическую систему*.
 ]
 
-#defenition(breakline: true)[
+#definition(breakline: true)[
   $ forall f, g in Re_([a,b]) space f perp g space (f space "и" space g "взаимно ортогональны") <=> limits(integral)_a^b f(x) g(x) d x = 0 $
 ]
 
@@ -35,7 +35,7 @@
   $ limits(integral)_(-pi)^pi sin k x sin n x d x = limits(integral)_(-pi)^pi sin k x cos n x d x = 0, space k eq.not n. $
 ]
 
-#defenition(breakline: true)[
+#definition(breakline: true)[
   $R_(2pi)$ --- класс $2pi$-периодических функций, определённых на $RR$ и интегрируемых на каждом конечном отрезке $RR$.
 ]
 

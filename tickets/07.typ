@@ -1,7 +1,7 @@
-#import "../functions.typ": theorem, defenition
+#import "../functions.typ": theorem, definition
 = Тригонометрический ряд. Коэффициенты Фурье и ряд Фурье. Ядро Дирихле
 
-#defenition(breakline: true)[
+#definition(breakline: true)[
   $f in Re_([-pi;pi]) => forall n in NN space a_0, a_n, b_n$ --- *коэффициенты ряда Фурье*, а ряд:
    $
     a_0/2 + limits(sum)_(n=1)^infinity (a_n cos n x + b_n sin n x)
@@ -33,7 +33,7 @@
   $
 ]
 
-#defenition(breakline: true)[
+#definition(breakline: true)[
   Функцию:
   $
     D_n (x) = 1/2 + cos x + cos 2x + dots + cos n x = (sin (2n+1)/2 x)/(2sin x / 2)

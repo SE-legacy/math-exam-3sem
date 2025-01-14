@@ -1,7 +1,7 @@
-#import "../functions.typ": defenition, theorem
+#import "../functions.typ": definition, theorem
 = Интеграл и первообразная
 
-#defenition(
+#definition(
   name: "Определение первообразной",
   breakline:  true
 )[

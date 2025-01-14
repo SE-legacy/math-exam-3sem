@@ -1,5 +1,5 @@
 #import "../functions.typ": theorem
-== Повехностный интеграл первого рода и теорема о его существовании
+= Повехностный интеграл первого рода и теорема о его существовании
 Пусть:
 + $Phi$ --- гладкая поверхность, заданная параметрически: $ overline(r) = overline(r)(u,v) = (x(u,v), y(u,v), z(u,v))(u,v) $
 + $forall i = overline(1\, n) space D_i$ квадрируема, $tau = {D_i}_(i = overline(1\,n))$ --- разбиение $D$, $Delta_tau$ --- диаметр разбиения 
@@ -9,18 +9,18 @@
 + $ sigma(tau) = sum_(i = 0)^n f(x(u_i,v_i), y(u_i, v_i), z(u_i, v_i)) Delta S_i $
 
 Поверхностный интерал первого рода:
-$ limits(integral.double)_Phi f(x,y,z) d S = I <=>  exists lim_(Delta_tau -> 0) sigma(tau) = I $
+$ limits(integral.double)_Phi f(x,y,z) dif S = I <=>  exists lim_(Delta_tau -> 0) sigma(tau) = I $
 
 #theorem(
 	name: "Теорема о существовании поверхностного интеграла первого рода",
 	breakline: true
 )[
-		$Phi$ --- гладкая поверхность, $forall phi in Phi$ $f(x,y,z)$ непрерывна в точке $phi$ $=>$ $exists limits(integral.double)_Phi f(x, y, z) = limits(integral.double)_D f(x(u,v), y(u,v), z(u,v)) sqrt(A^2 + B^2 + C^2) d u d v = limits(integral.double)_D f(x(u,v), y(u, v), z(u, v)) sqrt(E G - F^2) d u d v$
+		$Phi$ --- гладкая поверхность, $forall phi in Phi$ $f(x,y,z)$ непрерывна в точке $phi$ $=>$ $exists limits(integral.double)_Phi f(x, y, z) = limits(integral.double)_D f(x(u,v), y(u,v), z(u,v)) sqrt(A^2 + B^2 + C^2) dif u dif v = limits(integral.double)_D f(x(u,v), y(u, v), z(u, v)) sqrt(E G - F^2) dif u dif v$
 ][
-	$ ] I^* = limits(integral.double)_D f(x(u, v), y(u, v), z(u, v))  d u d v"" $
+	$ ] I^* = limits(integral.double)_D f(x(u, v), y(u, v), z(u, v))  dif u dif v"" $
 	Рассмотрим
-	$ |I^* -  sigma(tau)| = |limits(integral.double)_D f(x(u, v), y(u, v), z(u, v)) sqrt(E G - F^2) d u d v - sum_(i = 1)^n f(x(u_i, v_i), y(u_i, v_i), z(u_i, v_i)) Delta S_i| \
-	<= sum_(i = 1)^n limits(integral.double)_D_i |f(x(u, v), y(u, v), z(u, v)) - f(x(u_i, v_i), y(u_i, v_i), z(u_i, v_i))| sqrt(E G - F^2) d u d v \
+	$ |I^* -  sigma(tau)| = |limits(integral.double)_D f(x(u, v), y(u, v), z(u, v)) sqrt(E G - F^2) dif u dif v - sum_(i = 1)^n f(x(u_i, v_i), y(u_i, v_i), z(u_i, v_i)) Delta S_i| \
+	<= sum_(i = 1)^n limits(integral.double)_D_i |f(x(u, v), y(u, v), z(u, v)) - f(x(u_i, v_i), y(u_i, v_i), z(u_i, v_i))| sqrt(E G - F^2) dif u dif v \
 	<= limits(max)_((u, v) in D) sqrt(E G - F ^ 2) sum_(i= 0)^n omega_i mu (D_i), "где" $
 	- $E, G$ --- длины векторов касательных по $u$ и $v$ соответственно, $F$ --- скалярное произведение касательных
 	- $omega_i$ --- колебание $f$ на множестве $D_i$.

@@ -8,11 +8,11 @@
   Если функция $f$ гомоморфна в круге $K = {abs(z - z_0) < R}$, то в этом круге функция $f$ разлагается в степенной ряд 
   $ f(z) = sum_(n = 0)^(infinity) c_n (z - z_0)^n $
   где
-  $ c_n = 1 / (2 pi i) integral_(gamma_r) (f(zeta) d zeta) / ((zeta - z_0)^(n+1)) $
+  $ c_n = 1 / (2 pi i) integral_(gamma_r) (f(zeta) dif zeta) / ((zeta - z_0)^(n+1)) $
   $ gamma_r = {abs(zeta - z_0) = r}, 0 < r < R, (n = 0, 1, ...) $
 ][
   Зафиксируем точку $z in K$. Выберем r такое, что $r < R$ и $ abs(z - z_0) < r$. Обозначим $gamma_rho = {abs(zeta - z_0) = r}$. Согласно интегральной формуле Коши 
-  $ f(z) = 1 / (2 pi i) integral_(gamma_r) (f(zeta) d zeta) / (zeta - z) $
+  $ f(z) = 1 / (2 pi i) integral_(gamma_r) (f(zeta) dif zeta) / (zeta - z) $
 
   Преобразуем 
   $ 1 / (zeta - z) = 1 / ((zeta - z_0) - (z - z_0)) = 1 / (zeta - z_0) 1 / (1 - (z - z_0) / (zeta - z_0)) $
@@ -31,9 +31,9 @@
 
   Поскольку $ 0 < q < 1$ и ряд $sum_(n = 0)^(infinity) q^n$ сходится, то согласно признаку Вейерштрасса функциональный ряд сходится равномерно на $gamma_r$. Если все члены ряда умножить на непрерывную (значит, ограниченную на $gamma_r$) функцию $f(zeta)$, то равномерная сходимость не нарушится. По этой причине ряд можно почленно проинтегрировать
 
-  $ f(z) = 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (z - z_0)^n / (zeta - z_0)^(n+1) f(zeta) d zeta = sum_(n = 0)^(infinity) (z - z_0)^n 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (f(zeta) d zeta) / (zeta - z_0)^(n+1) $ 
+  $ f(z) = 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (z - z_0)^n / (zeta - z_0)^(n+1) f(zeta) dif zeta = sum_(n = 0)^(infinity) (z - z_0)^n 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (f(zeta) dif zeta) / (zeta - z_0)^(n+1) $ 
 
-  Обозначив $ c_n = 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (f(zeta) d zeta) / (zeta - z_0)^(n+1) $ будем иметь равенство:
+  Обозначив $ c_n = 1 / (2 pi i) integral_(gamma_r) sum_(n = 0)^(infinity) (f(zeta) dif zeta) / (zeta - z_0)^(n+1) $ будем иметь равенство:
 
   $ f(z) = sum_(n = 0)^(infinity) c_n (z - z_0)^n $
 ]
@@ -44,7 +44,7 @@
 )[
   Пусть функция $f$ непрерывна в односвязной области $D$ и интеграл от $f$ по любому замкнутому контуру, лежащему в $D$, равен нулю. Тогда функция $f$ голоморфна в области $D$
 ][
-  Функция $F(z) = integral_(z_0)^z f(zeta) d zeta$, где $z_0 in D$ --- произвольная точка области, дифференцируема в $D$ и $F'(z) = f(z)$, где $z in D$
+  Функция $F(z) = integral_(z_0)^z f(zeta) dif zeta$, где $z_0 in D$ --- произвольная точка области, дифференцируема в $D$ и $F'(z) = f(z)$, где $z in D$
   
   Согласно теореме Тейлора в окрестности каждой точки области $D$ функция $F$ разлагается в степенной ряд и является бесконечно дифференцируемой в ней функцией. Следовательно, функция $f = F'$ дифференцируема в $D$, т.е. голоморфна в $D$
 ]

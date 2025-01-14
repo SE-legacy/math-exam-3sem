@@ -1,4 +1,4 @@
-#import "../functions.typ": defenition, theorem
+#import "../functions.typ": definition, theorem
 = Дифференцируемость функции комплексного переменного. Теорема Коши-Римана. Голоморфные функции. Геометрический смысл производной. 
 
 *$RR^2-$дифференцируемость*
@@ -6,7 +6,7 @@
 Рассмотрим функцию $f: CC -> CC$ как отображение $RR^2 -> RR^2$, сопоставляющее каждой точке $z = x + i y$ точку $f(z) = u(x, y) + i v(x, y)$
 
 
-#defenition(
+#definition(
     name: "Определение", 
     breakline: true
 )[
@@ -15,7 +15,7 @@
 
 *$CC$-дифференцируемость*
 
-#defenition(
+#definition(
     name: "Определение", 
     breakline: true
 )[
@@ -80,7 +80,7 @@
     что означает дифференцируемость функции $f$.
 ]
 
-#defenition(
+#definition(
     name: "Определение",
     breakline: true
 )[

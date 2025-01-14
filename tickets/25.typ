@@ -1,7 +1,7 @@
-#import "../functions.typ": defenition, theorem
+#import "../functions.typ": definition, theorem
 = Интеграл и первообразная
 
-#defenition(
+#definition(
   name: "Определение первообразной",
   breakline:  true
 )[
@@ -15,7 +15,7 @@
   breakline: true
 )[
   Пусть функция $f$ непрерывна в односвязной области $D$ и интеграл по любой кусочно гладкой кривой, лежащей в $D$, зависит лишь от положения начальной и конечной точек. Тогда $forall z_0 in D$ функция 
-  $ F(z) = integral_(z_0)^z f(zeta) d zeta $
+  $ F(z) = integral_(z_0)^z f(zeta) dif zeta $
   где $z in D$, является голоморфной в области и $F'(z) = f(z)$, где $z in D$
 ][]
 
@@ -26,9 +26,9 @@
   Всякая голоморфная в односвязной области D функция $f$ имеет в ней первообразную.
 ][
   Рассмотрим любые две кусочно гладкие кривые $gamma_1$ и $gamma_2$, соединяющие точки $A$ и $B$ в области $D$. Тогда кривые $gamma_1$ и $gamma_2^-$ образуют замкнутый контур, интеграл по которому, в силу теоремы Коши для односвязной области равен 0, т.е.
-  $ integral_gamma_1 f(z) d z + integral_(gamma_2^-) f(z) d z = 0 $
+  $ integral_gamma_1 f(z) dif z + integral_(gamma_2^-) f(z) dif z = 0 $
   Тогда
-  $ integral_gamma_1 f(z) d z = integral_gamma_2 f(z) d z$
+  $ integral_gamma_1 f(z) dif z = integral_gamma_2 f(z) dif z$
   то есть интеграл не зависит от кривой, соединяющей точки. Поскольку голоморфная функция непрерывна, то, согласно теореме о голоморфности непрерывной функции, теорема доказана.
 ]
 
@@ -37,6 +37,6 @@
   breakline: true
 )[
   Пусть функция $f$ голоморфна в односвязной области $D$. Тогда $forall z_1, z_2 in D$ верно
-  $ integral_(z_1)^(z_2) f(zeta) d zeta = Phi(z_2) - Phi(z_1) $
+  $ integral_(z_1)^(z_2) f(zeta) dif zeta = Phi(z_2) - Phi(z_1) $
   где $Phi$ --- произвольная первообразная функции $f$ в $D$
 ][]

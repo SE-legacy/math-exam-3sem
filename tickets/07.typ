@@ -29,7 +29,7 @@
   $
   а при $alpha = 2pi k, space k in ZZ$ будем понимать равенство в предельном смысле:
   $
-    limits(lim)_(alpha arrow 2pi k)(sin (2n+1)/2 alpha)/(2sin alpha / 2) = (2n+1)/2.
+    limits(lim)_(alpha arrow 2pi k)(1/2 + cos alpha + cos 2alpha + dots + cos n alpha) = limits(lim)_(alpha arrow 2pi k)(sin (2n+1)/2 alpha)/(2sin alpha / 2) = (2n+1)/2.
   $
 ]
 

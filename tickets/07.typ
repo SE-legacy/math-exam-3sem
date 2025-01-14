@@ -36,7 +36,7 @@
 #defenition(breakline: true)[
   Функцию:
   $
-    D_n(x) = 1/2 + cos x + cos 2x + dots + cos n x = (sin (2n+1)/2 alpha)/(2sin alpha / 2)
+    D_n (x) = 1/2 + cos x + cos 2x + dots + cos n x = (sin (2n+1)/2 x)/(2sin x / 2)
   $
   называют *ядром Дирихле*.
 ]

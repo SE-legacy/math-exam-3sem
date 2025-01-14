@@ -25,10 +25,10 @@
 #let consequence = (name: "Следствие", breakline: false, wording, proof)  => block_proofable(name, breakline, wording, proof)
 #let property = (name: "Свойство", breakline: false, wording, proof)      => block_proofable(name, breakline, wording, proof)
 
-
+// Функция для нумерования формул #eq($y = x$, id: <eq:eq1>)
 #let equ(eq, id: none) = {
   let body = if type(id) == none {eq} else if type(id) == label [#eq #id] else [#eq <#id>]
   let numbering = if type(id) != none { "(1)" } else { none }
-  set math.equation(numbering: numbering)
+  set math.equation(numbering: numbering, supplement: [])
   body
 }

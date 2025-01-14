@@ -36,11 +36,11 @@
 ]
 
 #defenition(breakline: true)[
-  $ Re_(2pi) = {f | &D(f) subset.eq RR \ &and forall a,b in RR space [a;b] subset RR => f in Re_([a;b]) \ &and exists t in RR space forall x in D(f) space f(x) = f(x+t)}. $
+  $ R_(2pi) = {f | &D(f) subset.eq RR \ &and forall a,b in RR space [a;b] subset RR => f in Re_([a;b]) \ &and exists t in RR space forall x in D(f) space f(x) = f(x+t)}. $
 ]
 
 #theorem(breakline: true)[
-  $ f in Re_(2pi) => forall a in RR space limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
+  $ f in R_(2pi) => forall a in RR space limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
 ][]
 
 #theorem(breakline: true)[

@@ -1,4 +1,4 @@
-#import "../functions.typ": theorem
+#import "../functions.typ": theorem, equ
 = Представление частичной суммы ряда Фурье интегралом Дирихле
 
 #theorem(
@@ -8,7 +8,7 @@
 
 Пусть функция $f in R_(2 pi)$. Тогда частная сумма ряда Фурье функции $f$ может быть предствалена в следующем виде
 
-$ S_n (x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) D_n (t) d t, space x in RR, $<fla37>
+#equ($ S_n (x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) D_n (t) d t, space x in RR, $, id:<fla37>)
 
 где
 

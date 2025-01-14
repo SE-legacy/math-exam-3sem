@@ -1,16 +1,16 @@
-#import "../functions.typ": theorem, defenition
+#import "../functions.typ": theorem, defenition, equ
 = Тригонометрическая система, Ортогональность тригонометрической системы и свойства интеграла от периодической функции
 
 #defenition(breakline: true)[Функциональный ряд:
 
-  $ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $<eq:eq29>
+  #equ($ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $, id: <eq:eq29>)
 
   назывется *тригонометрическим рядом*, а числа $a_0, a_n, b_n$ --- его коэффициенты.
 ]
 
 #defenition(breakline: true)[Функции, входящие в состав тригонометрического ряда:
 
-  $ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $ <eq:eq30>
+  #equ($ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $, id: <eq:eq30>)
 
   образуют *тригонометрическую систему*.
 ]
@@ -24,19 +24,19 @@
     $forall f, g in$ (@eq:eq30) $space f perp g space "на" space [-pi;pi]$
   #set align(left)
 ][
-  $ limits(integral)_(-pi)^pi 1/2 cos k x  = 1/(2k) sin k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
+  $ limits(integral)_(-pi)^pi 1/2 cos k x d x = 1/(2k) sin k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
 
-  $ limits(integral)_(-pi)^pi 1/2 sin k x  = - 1/(2k) cos k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
+  $ limits(integral)_(-pi)^pi 1/2 sin k x d x = - 1/(2k) cos k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
 
-  $ limits(integral)_(-pi)^pi cos k x cos n x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n; $
+  $ limits(integral)_(-pi)^pi cos k x cos n x d x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n; $
 
   Аналогично:
 
-  $ limits(integral)_(-pi)^pi sin k x sin n x = limits(integral)_(-pi)^pi sin k x cos n x = 0, space k eq.not n. $
+  $ limits(integral)_(-pi)^pi sin k x sin n x d x = limits(integral)_(-pi)^pi sin k x cos n x d x = 0, space k eq.not n. $
 ]
 
 #defenition(breakline: true)[
-  $ R_(2pi) = {f | &D(f) subset.eq RR \ &and forall a,b in RR space [a;b] subset RR => f in Re_([a;b]) \ &and exists t in RR space forall x in D(f) space f(x) = f(x+t)}. $
+  $R_(2pi)$ --- класс $2pi$-периодических функций, определённых на $RR$ и интегрируемых на каждом конечном отрезке $RR$.
 ]
 
 #theorem(breakline: true)[

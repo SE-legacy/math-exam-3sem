@@ -20,4 +20,14 @@
     lt.eq epsilon/pi limits(integral) Ф_n (t) d t + (4 M)/pi limits(integral)_delta^pi Ф_n (t) d t lt.eq epsilon/2 (4 M (pi - delta))/(pi 2 (n + 1) sin^2 delta/2) <\
     < epsilon/2 + (2 M)/((n + 1) sin^2 delta/2).
   $
+
+  Найдется номер $n_epsilon$ такой, что $forall n > n_epsilon$ выполняется неравенство
+
+  $ (2 M)/((n + 1) sin^2 delta/2) < epsilon/2. $
+
+  Поэтому $forall n > n_epsilon$ и $forall x in RR$ выполняется неравенство
+
+  $ | sigma_n (x) - f(x) | < epsilon, $
+
+  т.е. $sigma_n arrows f$.
 ]

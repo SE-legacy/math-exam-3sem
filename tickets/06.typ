@@ -10,7 +10,7 @@
 
 #defenition(breakline: true)[Функции, входящие в состав тригонометрического ряда:
 
-  $ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $
+  $ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $ <eq:eq30>
 
   образуют *тригонометрическую систему*.
 ]
@@ -19,20 +19,20 @@
   $ forall f, g in Re_([a,b]) space f perp g space (f space "и" space g "взаимно ортогональны") <=> limits(integral)_a^b f(x) g(x) d x = 0 $
 ]
 
-#theorem(breakline: true)[
+#theorem(name: "Теорема" + text(" (об ортогональности тригонометрической системы)", style: "italic"),breakline: true)[
   #set align(center)
     $forall f, g in$ (@eq:eq30) $space f perp g space "на" space [-pi;pi]$
   #set align(left)
 ][
-  $ limits(integral)_a^b 1/2 cos k x  = 1/(2k) sin k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
+  $ limits(integral)_(-pi)^pi 1/2 cos k x  = 1/(2k) sin k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
 
-  $ limits(integral)_a^b 1/2 sin k x  = - 1/(2k) cos k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
+  $ limits(integral)_(-pi)^pi 1/2 sin k x  = - 1/(2k) cos k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
 
-  $ limits(integral)_a^b cos k x cos n x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n; $
+  $ limits(integral)_(-pi)^pi cos k x cos n x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n; $
 
   Аналогично:
 
-  $ limits(integral)_a^b sin k x sin n x = limits(integral)_a^b sin k x cos n x = 0, space k eq.not n. $
+  $ limits(integral)_(-pi)^pi sin k x sin n x = limits(integral)_(-pi)^pi sin k x cos n x = 0, space k eq.not n. $
 ]
 
 #defenition(breakline: true)[

@@ -5,7 +5,7 @@
 	name: "Теорема о принцип локализации Римана",
 	breakline: true
 )[
-  Пусть функция $f in R_(2 pi)$. Тогда при любом $a in (0, pi)$ частная сумама ряда фурье функции $f$ может быть представлена в следующем виде
+  Пусть функция $f in R_(2 pi)$. Тогда при любом $a in (0, pi)$ частная сумма ряда Фурье функции $f$ может быть представлена в следующем виде
 
 $ S_n (x) = 1/pi limits(integral)_0^a (f(x + t) + f(x - t)) (sin (2 n + 1)/2 t)/(2 sin t/2) d t + alpha_n (x), $
 
@@ -13,7 +13,7 @@ $ S_n (x) = 1/pi limits(integral)_0^a (f(x + t) + f(x - t)) (sin (2 n + 1)/2 t)/
 
 $ alpha_n (x) -> 0 " при " n -> infinity $
 ][
-  Пердставим правую часть равенства $S_n (x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) D_n (t) d t, space x in RR$ в виде суммы двух интегралов
+  Представим правую часть равенства $S_n (x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) D_n (t) d t, space x in RR$ в виде суммы двух интегралов
 
   $
   S_n(x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) (sin (2 n + 1)/2 t)/(2 sin t/2) d t =\

@@ -24,6 +24,9 @@
 #let defenition = (name: "Определение", breakline: false, content)        => block_base(name, breakline, content)
 #let consequence = (name: "Следствие", breakline: false, wording, proof)  => block_proofable(name, breakline, wording, proof)
 #let property = (name: "Свойство", breakline: false, wording, proof)      => block_proofable(name, breakline, wording, proof)
+#let lets = box(" ", stroke: (
+	top: 0.5pt, left: none, right: 0.5pt, bottom: 0.5pt
+), width: 4pt, height: auto, fill: none, inset: 2pt, baseline: 15%)
 
 // Функция для нумерования формул #eq($y = x$, id: <eq:eq1>)
 #let equ(eq, id: none) = {

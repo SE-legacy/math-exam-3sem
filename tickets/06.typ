@@ -3,7 +3,7 @@
 
 #defenition(breakline: true)[Функциональный ряд:
 
-  $ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $<eq:eq30>
+  $ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $<eq:eq29>
 
   назывется *тригонометрическим рядом*, а числа $a_0, a_n, b_n$ --- его коэффициенты.
 ]
@@ -44,7 +44,7 @@
 ][]
 
 #theorem(breakline: true)[
-  $f - 2pi"-периодическая" and f "разлагается в равномерно сходящийся ряд"$ (@eq:eq30), то $
+  $f - 2pi"-периодическая" and f "разлагается в равномерно сходящийся ряд"$ (@eq:eq29), то $
     a_0 = 1/pi limits(integral)_(-pi)^pi f(x) d x,\
     a_n = 1/pi limits(integral)_(-pi)^pi f(x) cos n x d x,\
     b_n = 1/pi limits(integral)_(-pi)^pi f(x) sin n x d x.

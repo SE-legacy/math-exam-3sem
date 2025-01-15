@@ -1,7 +1,7 @@
-#import "../functions.typ": theorem, defenition, equ
+#import "../functions.typ": theorem, definition, equ
 = Ряды Лорана. Теорема о разложении функции в ряд Лорана.
 
-#defenition(breakline: true)[
+#definition(breakline: true)[
   *Рядом Лорана* называется ряд вида:
   #equ($ limits(sum)_(n=-infinity)^(+infinity) c_n (z-z_0)^n, $, id: <eq:eq131>)
   понимаемый как сумма двух рядов:

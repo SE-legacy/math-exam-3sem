@@ -1,5 +1,5 @@
 #import "../functions.typ": theorem, equ
-= Теормеа Фейера
+= Теорема Фейера
 
 
 #theorem(

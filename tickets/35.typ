@@ -16,17 +16,6 @@
   $ limits(integral)_L f(z) d z = limits(sum)_(k=1)^n limits(integral)_L_k f(z) d z = 2pi i limits(sum)_(k=1)^n limits(r e s)_a_k f(z) $  
 ]
 
-#theorem()[Вычет функции $f(z)$ в изолированной особой точке $z=a$ равен коэффициенту $c_(-1)$ лорановского разложения $f(z)$ в $O(a)$.][
-  Разложим $f(z)$ в ряд Лорана в ${0<abs(z-a)<r}$:
-  $ c_(-1) = 1/(2pi i) limits(integral) f(z) d z, $
-  где в качестве контура можно взять любую окружность ${abs(z-a) = rho | rho < r}$, а правая часть равенства есть $limits(r e s)_a f(z)$.
-]
-
-#theorem()[Вычет функции $f(z)$ в простом полюсе $z=a$ можно найти по формуле:
-  $ limits(r e s)_a f(z) = limits(lim)_(z -> a) f(z)(z-a), $
-  а если $f(z) = phi(z)/psi(z)$, где $phi(z), psi(z)$ --- голоморфные в окрестности $a$ функции, такие что: $ phi(a)psi'(a) != 0, space phi(a) = 0, $ то: $ limits(r e s)_a f(z) = phi(a)/(psi'(a)). $
-][]
-
 #definition()[Пусть $f$ голоморфна в ${abs(z)>R}$, $z = oo$ ее изолированная особая точка.
   *Вычетом функции* $f$ в бесконечности называют число
   $ limits(r e s)_oo f = 1/(2pi i) limits(integral)_(L^-_r) f(z) dif z, $

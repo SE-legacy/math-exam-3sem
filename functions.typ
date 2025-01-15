@@ -1,11 +1,5 @@
 #let block_base = (name, breakline, content) => {
-	[*#name*.]
-	if breakline {
-		par(content)
-	} else {
-		h(5pt)
-		content
-	}
+	[*#name*. #content]
 }
 #let block_proofable = (name, breakline, wording, proof) => {
 	block_base(name, breakline, {

@@ -1,7 +1,7 @@
-#import "../functions.typ": theorem, definition, equ
+#import "../functions.typ": theorem, defenition, equ
 = Средние Фейера и их представление интегралом Фейера
 
-#definition(breakline: true)[
+#defenition(breakline: true)[
   Пусть $f in R_(2pi)$,
   $
     f(x) tilde a_0/2 + limits(sum)_(n=1)^(infinity)(a_n cos n x + b_n sin n x), \

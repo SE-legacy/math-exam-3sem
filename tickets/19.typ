@@ -1,7 +1,7 @@
-#import "../functions.typ": defenition
+#import "../functions.typ": definition
 = Равенство Парсеваля
 
-#defenition[
+#definition[
   Равенство
 
   $ 1/pi limits(integral)_(-pi)^pi f^2(x) d x = a_0^2/2 + limits(sum)_(k = 1)^infinity (a_k^2 + b_k^2) $

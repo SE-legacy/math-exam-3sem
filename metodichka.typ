@@ -53,6 +53,8 @@
 
 #generate_title()
 
+#set page(numbering: "1")
+
 #outline(title: "Программа экзамена", target: heading.where(level: 2, supplement: [Вопрос]))
 
 #load_tickets()

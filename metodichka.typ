@@ -29,10 +29,30 @@
 		include "tickets/" + ticketname
 	}
 }
+#let generate_title() = {
+	//text(strings.title.minobrnauki)
+	v(0.2em)
+	//text(weight: "bold", strings.title.sgu)
+	set align(center)
+	v(3cm)
+	text(weight: "bold", upper("Математический анализ") + "\n")
+	[*3 семестр*]
+	par("Материалы для подготовки к экзамену")
+	[_Вдохновляясь методическим пособием Людмилы Владимировны Сахно_]
+	v(1.5cm)
+	set align(left)
+	text("Данила Григорьев" + "\n")
+	text("Смирнов Егор" + "\n")
+	text("Роберт Толстов" + "\n")
+	text("Артём Рудяк" + "\n")
+	v(1fr)
+	set align(center)
+	text("г. Саратов" + " " + str(datetime.today().year()))
+	pagebreak()
+}
 
-= Методическое пособие по математическому анализу
-Материалы для подготовки к экзамену. Вдохновляясь материалами Людмилы Владимировны Сахно. \
-Григорьев Данила, Толстов Роберт, Рудяк Артём, Смирнов Егор. 2025 год.
+#generate_title()
+
 #outline(title: "Программа экзамена", target: heading.where(level: 2, supplement: [Вопрос]))
 
 #load_tickets()

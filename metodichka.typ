@@ -1,3 +1,4 @@
+#import "functions.typ": lets
 #let load_tickets = () => {
 	let tickets_offset = 1
 	set heading(numbering: (..nums) => {
@@ -35,3 +36,8 @@
 #outline(title: "Программа экзамена", target: heading.where(level: 2, supplement: [Вопрос]))
 
 #load_tickets()
+== Примечание
+Условные обозначения:
+- #lets --- пусть
+- $f in C$ --- непрерывная функция
+- $f in C^n$ --- непрерывная $n$-дифференцируемая функция, $f in C^1$ --- непрерывно дифференцируемая функция

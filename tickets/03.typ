@@ -7,6 +7,13 @@ $ integral.double_Phi P(x, y, z) dif y dif z := integral.double_D P(x(u,v), y(u,
 $ integral.double_Phi Q(x, y, z) dif z dif x := integral.double_D Q(x(u, v), y(u, v), z(u, v))B(u, v) dif u dif v $
 $ integral.double_Phi R(x, y, z) dif x dif y := integral.double_D R(x(u,v), y(u, v), z(u,v))C(u, v) dif u dif v $
 
+где
+
+$ A = A (u, v) = (D(y, z))/(D(u, v)) $
+$ B = B (u, v) = (D(z, x))/(D(u, v)) $
+$ C = C (u, v) = (D(x, y))/(D(u, v)) $
+
+
 == Свойства поверхностного интеграла второго рода
 
 + При смене ориентации поверхности интеграл меняет знак

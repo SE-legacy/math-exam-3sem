@@ -11,7 +11,7 @@
   $ c_n = 1 / (2 pi i) integral_(gamma_r) (f(zeta) dif zeta) / ((zeta - z_0)^(n+1)) $
   $ gamma_r = {abs(zeta - z_0) = r}, 0 < r < R, (n = 0, 1, ...) $
 ][
-  Зафиксируем точку $z in K$. Выберем r такое, что $r < R$ и $ abs(z - z_0) < r$. Обозначим $gamma_rho = {abs(zeta - z_0) = r}$. Согласно интегральной формуле Коши 
+  Зафиксируем точку $z in K$. Выберем r такое, что $r < R$ и $ abs(z - z_0) < r$. Обозначим $gamma_r = {abs(zeta - z_0) = r}$. Согласно интегральной формуле Коши 
   $ f(z) = 1 / (2 pi i) integral_(gamma_r) (f(zeta) dif zeta) / (zeta - z) $
 
   Преобразуем 

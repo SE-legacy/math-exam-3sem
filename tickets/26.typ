@@ -14,7 +14,7 @@
   $ = integral_(gamma_rho) (f(z) - f(z_0)) / (z - z_0) dif z = 0 $
 
   Функция $f$ непрерывна в $z_0$, тогда $forall epsilon exists delta > 0$ такое, что
-  $ abs(f(z) - f(z_0) < epsilon) $
+  $ abs(f(z) - f(z_0)) < epsilon $
   если $abs(z - z_0) < delta$. Тогда если радиус $rho < delta$, то $abs(f(z) - f(z_0)) < epsilon$ $forall z in gamma_rho$. Поэтому
   $ integral_(gamma_rho) (f(z) - f(z_0)) / (z - z_0) dif z < epsilon / rho 2 pi rho = 2 pi epsilon $
 

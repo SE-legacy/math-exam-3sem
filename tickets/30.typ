@@ -57,7 +57,7 @@
     $ => 1/(2pi i) limits(integral)_Gamma_1 f(zeta)/(zeta-z) dif zeta = limits(sum)_(n=0)^infinity (z-z_0)^n 1/(2pi i) limits(integral)_Gamma_1 limits(sum)_(n=0)^infinity (f(zeta) dif zeta)/(zeta - z_0)^(n+1) = limits(sum)_(n=0)^(+infinity) c_n (z-z_0)^n, $
     $ "где" forall n in NN space c_n = 1/(2pi i) limits(integral)_Gamma_1 (f(zeta) dif zeta)/(zeta - z_0)^(n+1). $
 
-    $ text("2.2.", weight: "bold", font: "Libertinus Serif") space zeta in Gamma_1 => abs(z-z_0) > abs(zeta-z_0) => abs(zeta-z_0)/abs(z-z_0) < 1 => 1/(zeta - z) = 1/((zeta - z_0) - (z - z_0)) = \
+    $ text("2.2.", weight: "bold", font: "Libertinus Serif") space zeta in Gamma_2 => abs(z-z_0) > abs(zeta-z_0) => abs(zeta-z_0)/abs(z-z_0) < 1 => 1/(zeta - z) = 1/((zeta - z_0) - (z - z_0)) = \
     = -1/(z-z_0) 1/(1-(zeta-z_0)/(z-z_0)) = - 1/(z-z_0) limits(sum)_(n=0)^(infinity) (zeta-z_0)^n/(z-z_0)^n. $
     Опираясь на равномерную сходимость ряда на $Gamma_2$:
     $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = -1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z_0) limits(sum)_(n=0)^(infinity) (zeta-z_0)^n/(z-z_0)^n dif zeta = -limits(sum)_(n=0)^(infinity) 1/(z-z_0)^(n+1) (1/(2pi i) limits(integral)_Gamma_2 f(zeta) (zeta-z_0)^n dif zeta). $

@@ -1,5 +1,6 @@
-#import "../functions.typ": theorem, definition, equ
 биба мля
+#set page(height: auto)
+#import "../functions.typ": theorem, definition, equ
 = Тригонометрическая система, Ортогональность тригонометрической системы и свойства интеграла от периодической функции
 
 #definition(breakline: true)[Функциональный ряд:

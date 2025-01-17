@@ -37,7 +37,7 @@
 
   то по неравенствам Коши имеем
 
-  $ | c_n | lt.eq M rho^n, space forall n = 1, 2, ... and forall rho in (0, epsilon') $
+  $ | c_(-n) | lt.eq M rho^n, space forall n = 1, 2, ... and forall rho in (0, epsilon') $
 
   Переходя к пределу при $rho -> 0$ получим равенство $c_(-n) = 0 space forall n = 1, 2, ...$ 
 

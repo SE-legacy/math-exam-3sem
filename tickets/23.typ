@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, consequence
 
 = Интегрирование функций комплексного переменного. Свойства интеграла

@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, definition, equ
 = Бесконечно удаленная точка как особая.
 

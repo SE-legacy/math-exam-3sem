@@ -1,4 +1,6 @@
 #import "../functions.typ": theorem
+биба
+#set page(height:  auto)
 = Повехностный интеграл первого рода и теорема о его существовании
 Пусть:
 + $Phi$ --- гладкая поверхность, заданная параметрически: $ overline(r) = overline(r)(u,v) = (x(u,v), y(u,v), z(u,v))(u,v) $

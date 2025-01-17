@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ" : theorem, definition, lets, consequence
 = Среднее квадратичное отклонение, теорема о наилучшем приближении и неравенство Бесселя.
 #definition[$(f_n)$ сходится в среднем к $f$ на $[a, b]$ $<==>^(d f)$ $limits(lim)_(n -> infinity) limits(integral)_a^b (f_n(x) - f(x))^2 dif x = 0$]

@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": definition, theorem, equ
 = Изолированные особые точки и их классификация. Описание устранимых особых точек.
 

@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, equ, definition
 = Изолированные особые точки и их классификация. Описание полюсов.
 

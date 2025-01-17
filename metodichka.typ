@@ -1,4 +1,5 @@
 #import "functions.typ": lets
+#let prev = none
 #let load_tickets = () => {
 	let tickets_offset = 1
 	set heading(numbering: (..nums) => {
@@ -8,9 +9,29 @@
 		}
 	}, supplement: [Вопрос]
 		, offset: tickets_offset)
-	show heading.where(level: tickets_offset + 1): it => {
+	show heading.where(level: tickets_offset + 1, supplement: [Вопрос]): it => {
+		/*let h = query(heading.where(level: tickets_offset + 1, supplement: [Вопрос]), here()).rev()
+		//[#{tickets_offset + 1}]
+		if h.len() > 0 {
+			[#h.at(0).fields()]
+		}*/
+		//set page(height: )
+		/*let i = counter(heading).at(<heading>)
+		[#i]
+		prev = here()*/
+		/*context {
+			let loc = metadata.where(value: "ticket_end").before(here())
+			let selector = heading.where(level: tickets_offset + 1, supplement: [Вопрос]).before(inclusive: false, loc)
+			let h = query(selector).rev()
+			if h.len() > 0 {
+				let pos = loc[0].location().position()
+				[#h.at(0).fields()]
+			}
+			set page(height: 10pt)
+		}*/
+
 		pagebreak()
-		it
+		[#metadata("ticket_end") #it #metadata("ticket_begin") <heading>]
 	}
 	let first = 1
 	let last = 35
@@ -29,35 +50,5 @@
 		include "tickets/" + ticketname
 	}
 }
-#let generate_title() = {
-	//text(strings.title.minobrnauki)
-	v(0.2em)
-	//text(weight: "bold", strings.title.sgu)
-	set align(center)
-	v(3cm)
-	text(weight: "bold", upper("Математический анализ") + "\n")
-	[*3 семестр*]
-	par("Материалы для подготовки к экзамену")
-	[_Вдохновляясь методическим пособием Людмилы Владимировны Сахно_]
-	v(1.5cm)
-	set align(left)
-	text("Данила Григорьев" + "\n")
-	text("Смирнов Егор" + "\n")
-	text("Роберт Толстов" + "\n")
-	text("Артём Рудяк" + "\n")
-	v(1fr)
-	set align(center)
-	text("г. Саратов" + " " + str(datetime.today().year()))
-	pagebreak()
-}
-
-#generate_title()
-
-#outline(title: "Программа экзамена", target: heading.where(level: 2, supplement: [Вопрос]))
-
+#set page(background: rect(width: 100% - 2.5cm, height: 100% - 2.5cm, stroke: black))
 #load_tickets()
-== Примечание
-Условные обозначения:
-- #lets --- пусть
-- $f in C$ --- непрерывная функция
-- $f in C^n$ --- непрерывная $n$-дифференцируемая функция, $f in C^1$ --- непрерывно дифференцируемая функция

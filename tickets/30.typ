@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, definition, equ
 = Ряды Лорана. Теорема о разложении функции в ряд Лорана.
 

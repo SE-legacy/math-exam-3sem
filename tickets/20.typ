@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, equ
 = Полнота тригонометрической системы.
 

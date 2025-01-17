@@ -1,3 +1,5 @@
+биба
+#set page(height: auto)
 #import "../functions.typ": theorem, definition, equ
 = Средние Фейера и их представление интегралом Фейера
 

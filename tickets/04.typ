@@ -1,4 +1,6 @@
 #import "../functions.typ": theorem
+биба
+#set page(height:  auto)
 #set math.equation(numbering: none)
 = Формула Стокса
 #theorem(name: "Теорема Стокса")[

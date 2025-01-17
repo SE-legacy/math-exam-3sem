@@ -65,7 +65,7 @@
     $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = -limits(sum)_(m=-infinity)^(-1) (z-z_0)^m (1/(2pi i) limits(integral)_Gamma_2 limits(sum)_(m=-infinity)^(-1) (f(zeta) dif zeta)/(zeta-z_0)^(m+1)). $
 
     3. Таким образом:
-    $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = - limits(sum)_(m=-infinity)^(-1) c_n (z-z_0)^n, $
+    $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = - limits(sum)_(n=-infinity)^(-1) c_n (z-z_0)^n, $
     $ "где" forall n in ZZ sect (-infinity, -1] space c_n = 1/(2pi i) limits(integral)_Gamma_2 (f(zeta) dif zeta)/(zeta - z_0)^(n+1). $
 
     4. Остаётся заметить, что в формулах для коэффициентов контуры интегрирования можно заменить на $forall gamma_rho={abs(zeta-z_0) = rho, space r < rho < R}.$

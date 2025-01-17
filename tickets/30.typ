@@ -59,7 +59,7 @@
     $ => 1/(2pi i) limits(integral)_Gamma_1 f(zeta)/(zeta-z) dif zeta = limits(sum)_(n=0)^infinity (z-z_0)^n 1/(2pi i) limits(integral)_Gamma_1 limits(sum)_(n=0)^infinity (f(zeta) dif zeta)/(zeta - z_0)^(n+1) = limits(sum)_(n=0)^(+infinity) c_n (z-z_0)^n, $
     $ "где" forall n in NN space c_n = 1/(2pi i) limits(integral)_Gamma_1 (f(zeta) dif zeta)/(zeta - z_0)^(n+1). $
 
-    $ text("2.2.", weight: "bold", font: "Libertinus Serif") space zeta in Gamma_1 => abs(z-z_0) > abs(zeta-z_0) => abs(zeta-z_0)/abs(z-z_0) < 1 => 1/(zeta - z) = 1/((zeta - z_0) - (z - z_0)) = \
+    $ text("2.2.", weight: "bold", font: "Libertinus Serif") space zeta in Gamma_2 => abs(z-z_0) > abs(zeta-z_0) => abs(zeta-z_0)/abs(z-z_0) < 1 => 1/(zeta - z) = 1/((zeta - z_0) - (z - z_0)) = \
     = -1/(z-z_0) 1/(1-(zeta-z_0)/(z-z_0)) = - 1/(z-z_0) limits(sum)_(n=0)^(infinity) (zeta-z_0)^n/(z-z_0)^n. $
     Опираясь на равномерную сходимость ряда на $Gamma_2$:
     $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = -1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z_0) limits(sum)_(n=0)^(infinity) (zeta-z_0)^n/(z-z_0)^n dif zeta = -limits(sum)_(n=0)^(infinity) 1/(z-z_0)^(n+1) (1/(2pi i) limits(integral)_Gamma_2 f(zeta) (zeta-z_0)^n dif zeta). $
@@ -67,7 +67,7 @@
     $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = -limits(sum)_(m=-infinity)^(-1) (z-z_0)^m (1/(2pi i) limits(integral)_Gamma_2 limits(sum)_(m=-infinity)^(-1) (f(zeta) dif zeta)/(zeta-z_0)^(m+1)). $
 
     3. Таким образом:
-    $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = - limits(sum)_(m=-infinity)^(-1) c_n (z-z_0)^n, $
+    $ 1/(2pi i) limits(integral)_Gamma_2 f(zeta)/(zeta - z) dif zeta = - limits(sum)_(n=-infinity)^(-1) c_n (z-z_0)^n, $
     $ "где" forall n in ZZ sect (-infinity, -1] space c_n = 1/(2pi i) limits(integral)_Gamma_2 (f(zeta) dif zeta)/(zeta - z_0)^(n+1). $
 
     4. Остаётся заметить, что в формулах для коэффициентов контуры интегрирования можно заменить на $forall gamma_rho={abs(zeta-z_0) = rho, space r < rho < R}.$

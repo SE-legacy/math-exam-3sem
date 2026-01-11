@@ -34,8 +34,8 @@
   Функция $f$ $CC$-дифференцируема в точке $z_0$ тогда и только тогда, когда она $RR^2$-дифференцируема в точке $z_0$ и выполняются условия Коши-Римана
   $
     cases(
-      (diff u) / (diff x) (x_0, y_0) = (diff v) / (diff y) (x_0, y_0),
-      (diff u) / (diff y) (x_0, y_0) = - (diff v) / (diff x) (x_0, y_0)
+      (partial u) / (partial x) (x_0, y_0) = (partial v) / (partial y) (x_0, y_0),
+      (partial u) / (partial y) (x_0, y_0) = - (partial v) / (partial x) (x_0, y_0)
     )
   $
 ][
@@ -61,19 +61,19 @@
 
   Функции $u$ и $v$ дифференцируемы в точке $(x_0, y_0)$, т.к. $alpha_1(h) -> 0$ и $alpha_2(h) -> 0$ при $h -> 0$. И
 
-  $ (diff u) / (diff x) (x_0, y_0) = a_1 $
-  $ (diff u) / (diff y) (x_0, y_0) = -a_2 $
-  $ (diff v) / (diff x) (x_0, y_0) = a_2 $
-  $ (diff v) / (diff y) (x_0, y_0) = a_1 $
+  $ (partial u) / (partial x) (x_0, y_0) = a_1 $
+  $ (partial u) / (partial y) (x_0, y_0) = -a_2 $
+  $ (partial v) / (partial x) (x_0, y_0) = a_2 $
+  $ (partial v) / (partial y) (x_0, y_0) = a_1 $
 
   Следовательно,
 
-  $ (diff u) / (diff x) (x_0, y_0) = (diff v) / (diff y) (x_0, y_0) $
-  $ (diff u) / (diff y) (x_0, y_0) = - (diff v) / (diff x) (x_0, y_0) $
+  $ (partial u) / (partial x) (x_0, y_0) = (partial v) / (partial y) (x_0, y_0) $
+  $ (partial u) / (partial y) (x_0, y_0) = - (partial v) / (partial x) (x_0, y_0) $
 
   *Достаточность:*
 
-  Пусть $(diff u) / (diff x) (x, y) = a_1$, $(diff u) / (diff y) (x, y) = -a_2$
+  Пусть $(partial u) / (partial x) (x, y) = a_1$, $(partial u) / (partial y) (x, y) = -a_2$
 
   В силу дифференцируемости функций $u, v$:
   $ u(x_0 + h_1, y_0 + h_2) - u(x_0, y_0) = a_1 h_1 - a_2 h_2 + o(abs(h)) $

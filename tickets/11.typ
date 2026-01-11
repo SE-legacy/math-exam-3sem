@@ -1,13 +1,13 @@
-#import "../functions.typ": theorem, consequence, equ
-= Признак Дини
+#import "../functions.typ": consequence, equ, theorem
+= Признак Дини поточечной сходимости и три следствия
 
 #theorem(
-	name: "Теорема (признак Дини)",
-	breakline: true
+  name: "Теорема (признак Дини)",
+  breakline: true,
 )[
   Пусть функция $f in R_(2 pi)$. Если при некотором фиксированом $x$ сходится интеграл
 
-  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/t dif t, $, id:<eq:eq40>)
+  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/t dif t, $, id: <eq:eq40>)
 
   где $A$ --- некоторое число, то в этой точке $x$ ряд Фурье функции $f$ сходится и имеет своей суммой число $A$.
 ][
@@ -16,16 +16,18 @@
   $ S_n (x) - A = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t) - 2 A)/(2 sin t/2) sin (2n + 1)/2 t dif t, $
 
   Если сходится интеграл
-  
+
   $ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/(t) dif t, $
 
   то сходится интеграл
-  
+
   $ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/(2 sin t/2) dif t $
 
   (так как $sin t/2space ~ space t/2$ при $t -> 0$). Тогда, согласно обобщению теоремы Римана-Лебега, имеем
 
-  $ limits(lim)_(n -> infinity) 1/pi limits(integral)_0^pi (f(x + t) + f(x - t) - 2 A)/(2 sin t/2) sin (2n + 1)/2 t dif t = 0 $
+  $
+    limits(lim)_(n -> infinity) 1/pi limits(integral)_0^pi (f(x + t) + f(x - t) - 2 A)/(2 sin t/2) sin (2n + 1)/2 t dif t = 0
+  $
 
   т.е.
 
@@ -41,33 +43,33 @@
 ][
   Согласно признаку Дини нам следует доказать сходимость интеграла
 
-  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 f(x)|)/(t) dif t, $, id:<eq:eq41>)
-  
+  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 f(x)|)/(t) dif t, $, id: <eq:eq41>)
+
   Точка $t = 0$ является единственной особой точкой для этого интеграла. Имеем
 
   $
-  limits(lim)_(t -> + 0) (f(x + t) + f(x - t) - 2 f(x))/(t) =\
-  = limits(lim)_(t -> + 0) ((f(x + t) - f(x))/t - (f(x - t) - f(x))/(-t)) = f'(x) - f'(x) = 0.
+    limits(lim)_(t -> + 0) (f(x + t) + f(x - t) - 2 f(x))/(t) =\
+    = limits(lim)_(t -> + 0) ((f(x + t) - f(x))/t - (f(x - t) - f(x))/(-t)) = f'(x) - f'(x) = 0.
   $
 
   Следовательно, подинтегральная функция в (@eq:eq41) ограничена в правой полуокрестности точки $t = 0$. Значит, несобственный интеграл (@eq:eq41) сходится.
 ]
 
 #consequence[
-  
+
   Пусть функция $f in R_(2 pi)$ и в точке $x$ существуют односторнние левая производная $f_л^'$ и правая производная $f_п^'$. Тогда
 
-$ lim_(n -> infinity) S_n (x) = f(x) $
+  $ lim_(n -> infinity) S_n (x) = f(x) $
 
 ][
   В этом случае
 
   $
-  limits(lim)_(t -> + 0) (f(x + t) + f(x - t) - 2 f(x))/(t) =\
-  = limits(lim)_(t -> + 0) ((f(x + t) - f(x))/t - (f(x - t) - f(x))/(-t)) = f_п '(x) - f_л '(x),
+    limits(lim)_(t -> + 0) (f(x + t) + f(x - t) - 2 f(x))/(t) =\
+    = limits(lim)_(t -> + 0) ((f(x + t) - f(x))/t - (f(x - t) - f(x))/(-t)) = f_п '(x) - f_л '(x),
   $
 
-   что является конечным числом. Из этого делаем выводы как в следствии 1.
+  что является конечным числом. Из этого делаем выводы как в следствии 1.
 ]
 
 #consequence[
@@ -75,13 +77,10 @@ $ lim_(n -> infinity) S_n (x) = f(x) $
   Пусть функция $f in R_(2 pi)$ и в точке $x$ существуют следующие четыре конечных предела
 
   $
-  f(x + 0) = lim_(t -> x + 0) f(t),\
-  
-  f(x - 0) = lim_(t -> x - 0) f(t),\
-  
-  lim_(t -> + 0) (f(x + t) - f(x + 0))/t,\
-  
-  lim_(t -> + 0) (f(x - t) - f(x - 0))/(-t).
+    f(x + 0) = lim_(t -> x + 0) f(t),\
+    f(x - 0) = lim_(t -> x - 0) f(t),\
+    lim_(t -> + 0) (f(x + t) - f(x + 0))/t,\
+    lim_(t -> + 0) (f(x - t) - f(x - 0))/(-t).
   $
 
   Тогда

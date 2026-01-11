@@ -1,5 +1,5 @@
 #import "../functions.typ": theorem, definition
-= Интегральная теорема Коши. 
+= Интегральная теорема Коши
 #theorem(
   name: "Интегральная теорема Коши для треугольника",
   breakline: true

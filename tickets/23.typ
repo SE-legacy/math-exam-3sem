@@ -31,7 +31,7 @@ limits(integral)_(gamma_1 union gamma_2) f(z) d z = limits(integral)_gamma_1 f(z
 $][]
 
 #property(name: "Оценка интеграла")[$
-abs(limits(integral)_gamma f(z) d z) <= limits(integral)_gamma abs(f(z)) d z,
+abs(limits(integral)_gamma f(z) d z) <= limits(integral)_gamma abs(f(z)) d s,
 $ где справа криволинейный интеграл I рода.
 ][
   Пусть $J = limits(integral)_gamma f(z) d z = abs(J)e^(i phi)$. Так как $abs(J) = J e^(-i phi)$, то

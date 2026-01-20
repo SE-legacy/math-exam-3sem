@@ -34,12 +34,12 @@ $][]
 abs(limits(integral)_gamma f(z) d z) <= limits(integral)_gamma abs(f(z)) d z,
 $ где справа криволинейный интеграл I рода.
 ][
-  Пусть $J = limits(integral)_gamma f(z) d z = abs(J)e^(i phi)$. Так как $abs(J) = J e^(-i phi) =>$
+  Пусть $J = limits(integral)_gamma f(z) d z = abs(J)e^(i phi)$. Так как $abs(J) = J e^(-i phi)$, то
   $
     abs(J) = limits(integral)_gamma e^(-i phi) f(z) d z = limits(integral)_a^b e^(-i phi) f(gamma(t))gamma'(t)d t in RR ==>
   $
   $
-   abs(J) = limits(integral)_a^b R e{e^(-i phi) f(gamma(t))gamma'(t)d t} <= limits(integral)_a^b abs(f(gamma(t)))abs(gamma'(t))d t = limits(integral)_gamma abs(f(z)) d z.
+   abs(J) = limits(integral)_a^b "Re"{e^(-i phi) f(gamma(t))gamma'(t)}d t <= limits(integral)_a^b abs(f(gamma(t)))abs(gamma'(t))d t = limits(integral)_gamma abs(f(z)) d z.
   $
 ]
 

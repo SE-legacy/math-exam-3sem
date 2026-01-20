@@ -13,7 +13,7 @@
 		it
 	}
 	let first = 1
-	let last = 35
+	let last = 39
 	for ticketid in range(first, last + 1) {
 		let ticketname = str(ticketid) + ".typ"
 		while ticketname.len() < str(last).len() + ".typ".len() {

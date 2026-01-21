@@ -27,7 +27,7 @@
 
 #definition()[Пусть $f$ голоморфна в ${abs(z) > R}$, $z = infinity$ ее изолированная особая точка.
   *Вычетом функции $f$ в бесконечности* называют число
-  $ res(infinity) f = 1/(2pi i) limits(integral)_(L^-_r) f(z) dif z, $
+  $ res(infinity) f = 1/(2pi i) limits(integral)_(L^-_r) f(z) d z, $
   где окружность $L = {abs(z) = r}$ радиуса $r > R$ проходится по часовой стрелке.
 ]
 

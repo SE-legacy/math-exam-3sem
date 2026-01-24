@@ -33,9 +33,9 @@
 
   В силу непрерывности функция $f$ на $D$, $f$ непрерывна в точке $z_1$, т.е.
 
-  $ forall epsilon > 0 " " exists delta > 0 " " (abs(zeta - z_1) < delta => abs(f(zeta) - f(z_1))). $
+  $ forall epsilon > 0 " " exists delta > 0 " " forall z in D " " (abs(z - z_1) < delta => abs(f(z) - f(z_1))). $
 
-  Если $zeta$ принадлежит отрезку, соединяющему $z_1$ и $z$, то $abs(f(zeta) - f(z_1)))$. Поэтому
+  Если $zeta$ принадлежит отрезку, соединяющему $z_1$ и $z$, то $abs(f(zeta) - f(z_1)) < epsilon$. Поэтому
 
     $ abs((F(z) - F(z_1))/(z - z_1) - f(z_1)) = 1/abs(z - z_1) abs(limits(integral)_(z_1)^(z) (f(zeta) - f(z_1)) d zeta) <= 1/abs(z_1 - z) epsilon abs(z_1 - z) = epsilon ==> \
   lim_(z -> z_1) (F(z) - F(z_1))/(z - z_1) = f(z_1), $

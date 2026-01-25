@@ -45,7 +45,3 @@
   $ 1/(2 pi i) limits(integral)_L f(z) d z = -res(infinity) f(z). $
 ]
 
-#align(center)[
-  #v(1em)
-  *Успехов на экзамене!*
-]

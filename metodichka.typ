@@ -52,6 +52,11 @@
 
 #load_tickets()
 
+#align(center)[
+  #v(1em)
+  *Успехов на экзамене!*
+]
+
 #heading(outlined: false)[Примечание]
 Условные обозначения:
 - #lets --- пусть

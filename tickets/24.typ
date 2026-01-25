@@ -31,23 +31,23 @@
   В силу вышеописанной теоремы
 
   $ limits(integral)_L f(z)d z = 0 ==> \
-  abs(limits(integral)_Gamma f (z) d z) = abs(limits(integral)_Gamma f(z) d z - limits(integral)_L f(z) d z) = \
-  = abs(limits(sum)_(j = 0)^(n - 1) limits(integral)_(gamma_j) f(z)d z - limits(sum)_(j = 0)^(n - 1) limits(integral)_(l_j) f(z) d z) <=  limits(sum)_(j = 0)^(n - 1) abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z). $
+  abs(limits(integral)_Gamma f (z) d z, size: #80%) = abs(limits(integral)_Gamma f(z) d z - limits(integral)_L f(z) d z, size: #80%) = \
+  = abs(limits(sum)_(j = 0)^(n - 1) limits(integral)_(gamma_j) f(z)d z - limits(sum)_(j = 0)^(n - 1) limits(integral)_(l_j) f(z) d z, size: #80%) <=  limits(sum)_(j = 0)^(n - 1) abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z, size: #80%). $
 
   Заметим, что
 
   $ limits(integral)_(gamma_j) f(z_j) d z = f(z_j)(z_(j+1)-z_j) = limits(integral)_(l_j) f(z_j)d z ==> \
-  abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z) <= abs(integral_(gamma_j) (f(z)d z - f(z_j)) d z) + abs(limits(integral)_(l_j) (f(z_j)d z - f(z)) d z) <= \
+  abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z, size: #80%) <= abs(limits(integral)_(gamma_j) (f(z)d z - f(z_j)) d z, size: #80%) + abs(limits(integral)_(l_j) (f(z_j)d z - f(z)) d z, size: #80%) <= \
   limits(sup)_(z in gamma_j) abs(f(z) - f(z_j))abs(gamma_j) + limits(sup)_(z in l_j) abs(f(z) - f(z_j))abs(l_j). $
 
   Т.к. расстояние между любыми двумя точками дуги $gamma_j$ или отрезка $l_j$ меньше, чем $rho$, то
 
   $ limits(sup)_(z in gamma_j) abs(f(z) - f(z_j)) < epsilon, " " limits(sup)_(z in l_j) abs(f(z) - f(z_j)) < epsilon ==> \
-  abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z) < epsilon (abs(gamma_j) + abs(l_j)) <= 2 epsilon abs(gamma_j) $
+  abs(limits(integral)_(gamma_j) f(z) d z - limits(integral)_(l_j) f(z) d z, size: #80%) < epsilon (abs(gamma_j) + abs(l_j)) <= 2 epsilon abs(gamma_j) $
 
   и
 
-  $ abs(limits(integral)_Gamma f(z) d z) <= 2 epsilon limits(sum)_(j=0)^(n-1) abs(gamma_j) = 2 epsilon abs(Gamma). $
+  $ abs(limits(integral)_Gamma f(z) d z, size: #80%) <= 2 epsilon limits(sum)_(j=0)^(n-1) abs(gamma_j) = 2 epsilon abs(Gamma). $
 
   Т.к. $epsilon$ произвольно мало, то
 

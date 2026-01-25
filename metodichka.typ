@@ -1,14 +1,14 @@
 #import "functions.typ": lets
 #let load_tickets = () => {
-	let tickets_offset = 1
 	set heading(numbering: (..nums) => {
-		let number = nums.pos().map(str).slice(1).join(".")
-		if nums.pos().len() == tickets_offset + 1 {
+		let number = nums.pos().map(str).slice(0).join(".")
+		if nums.pos().len() == 1 {
 			"Вопрос " + number + "."
 		}
-	}, supplement: [Вопрос]
-		, offset: tickets_offset)
-	show heading.where(level: tickets_offset + 1): it => {
+	},
+    hanging-indent: 0pt
+	)
+	show heading.where(level: 1): it => {
 		pagebreak()
 		it
 	}
@@ -19,13 +19,6 @@
 		while ticketname.len() < str(last).len() + ".typ".len() {
 			ticketname = "0" + ticketname
 		}
-		counter(heading).update((..nums) => {
-			let arr = nums.pos()
-			if arr.len() > tickets_offset {
-				arr.at(tickets_offset) = ticketid - 1
-			}
-			return arr
-		})
 		include "tickets/" + ticketname
 	}
 }
@@ -55,10 +48,11 @@
 
 #set page(numbering: "1")
 
-#outline(title: "Программа экзамена", target: heading.where(level: 2, supplement: [Вопрос]))
+#outline(title: "Программа экзамена", target: heading.where(level: 1))
 
 #load_tickets()
-== Примечание
+
+#heading(outlined: false)[Примечание]
 Условные обозначения:
 - #lets --- пусть
 - $f in C$ --- непрерывная функция

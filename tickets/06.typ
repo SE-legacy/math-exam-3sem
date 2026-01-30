@@ -1,52 +1,55 @@
-#import "../functions.typ": theorem, definition, equ
+#import "../functions.typ": theorem, definition, equ, lets
 = Тригонометрическая система, Ортогональность тригонометрической системы и свойства интеграла от периодической функции
 
-#definition(breakline: true)[Функциональный ряд:
+#definition()[
+  Функциональный ряд
 
-  #equ($ a_0 / 2 + (a_n cos n x + b_n sin n x), space forall n in NN space a_0, a_n, b_n in RR, $, id: <eq:eq29>)
-
-  назывется *тригонометрическим рядом*, а числа $a_0, a_n, b_n$ --- его коэффициенты.
+  #equ($ a_0 / 2 + limits(sum)^infinity_(n=1)(a_n cos n x + b_n sin n x), $, id: <eq:eq29>)
+  
+  где $a_0, a_1, b_1, ..., a_n, b_n, ...$ --- вещественные числа, назывется *тригонометрическим рядом*, а эти числа --- его коэффициентами.
 ]
 
-#definition(breakline: true)[Функции, входящие в состав тригонометрического ряда:
+#definition()[
+  Функции, входящие в состав тригонометрического ряда (@eq:eq29):
 
-  #equ($ 1 / 2, cos x, sin x, cos 2x, sin 2x, dots $, id: <eq:eq30>)
+  #equ($ 1/2 space, space cos x, space sin x, space cos 2x, space sin 2x, space dots $, id: <eq:eq30>)
 
   образуют *тригонометрическую систему*.
 ]
 
-#definition(breakline: true)[
-  $ forall f, g in Re_([a,b]) space f perp g space (f space "и" space g "взаимно ортогональны") <=> limits(integral)_a^b f(x) g(x) d x = 0 $
+#definition()[
+  Функции $f$ и $g$, интегрируемые на $[a, b]$, называют взаимно ортогональными, если 
+  $ limits(integral)_a^b f(x) g(x) d x = 0. $
 ]
 
-#theorem(name: "Теорема" + text(" (об ортогональности тригонометрической системы)", style: "italic"),breakline: true)[
-  #set align(center)
-    $forall f, g in$ (@eq:eq30) $space f perp g space "на" space [-pi;pi]$
-  #set align(left)
+#theorem(name: "Теорема (об ортогональности тригонометрической системы)")[
+  Любые две функции из тригонометрической системы (@eq:eq30) взаимно ортогональны на отрезке $[-pi;pi]$.
 ][
-  $ limits(integral)_(-pi)^pi 1/2 cos k x d x = 1/(2k) sin k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
+  $ limits(integral)_(-pi)^pi 1/2 cos k x d x = 1/(2k) sin k x space #line(end: (0pt, 26pt), stroke: 0.5pt + black)_(space -pi)^(space pi) = 0; \
+  limits(integral)_(-pi)^pi 1/2 sin k x d x = - 1/(2k) cos k x space #line(end: (0pt, 26pt), stroke: 0.5pt + black)_(space -pi)^(space pi) = 0; \
+  limits(integral)_(-pi)^pi cos k x cos n x d x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n. $
 
-  $ limits(integral)_(-pi)^pi 1/2 sin k x d x = - 1/(2k) cos k x space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0; $
-
-  $ limits(integral)_(-pi)^pi cos k x cos n x d x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n; $
-
-  Аналогично:
+  Аналогично
 
   $ limits(integral)_(-pi)^pi sin k x sin n x d x = limits(integral)_(-pi)^pi sin k x cos n x d x = 0, space k eq.not n. $
 ]
 
-#definition(breakline: true)[
+#definition()[
   $R_(2pi)$ --- класс $2pi$-периодических функций, определённых на $RR$ и интегрируемых на каждом конечном отрезке $RR$.
 ]
 
-#theorem(breakline: true)[
-  $ f in R_(2pi) => forall a in RR space limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
+#theorem()[
+  Если $f in R_(2pi)$, то для любого $a in RR$
+
+  $ limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
 ][]
 
-#theorem(breakline: true)[
-  $f - 2pi"-периодическая" and f "разлагается в равномерно сходящийся ряд"$ (@eq:eq29), то $
-    a_0 = 1/pi limits(integral)_(-pi)^pi f(x) d x,\
-    a_n = 1/pi limits(integral)_(-pi)^pi f(x) cos n x d x,\
+#theorem()[
+  Если $2 pi$-периодическая функция $f$ разлагается в равномерно сходящийся ряд (@eq:eq29), то его коэффициенты вычисляются по формулам
+
+  $
+    a_0 = 1/pi limits(integral)_(-pi)^pi f(x) d x, "  "
+    a_n = 1/pi limits(integral)_(-pi)^pi f(x) cos n x d x, "  "
     b_n = 1/pi limits(integral)_(-pi)^pi f(x) sin n x d x.
   $
 ][]

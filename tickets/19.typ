@@ -19,29 +19,29 @@
 
   $ a = x_0 < x_1 < x_2 < ... < x_n = b $
 
-  Пусть $Delta x_i = x_i - x_(i - 1), space i = 1,...,n, space d = max_(1 lt.eq i lt.eq n) Delta x_i$, $omega_i$ --- колебание функции $f$ на $[x_(i-1), x_i]$.
+  Пусть $Delta x_i = x_i - x_(i - 1), space i = 1,...,n, space d = max_(1 <= i <= n) Delta x_i$, $omega_i$ --- колебание функции $f$ на $[x_(i-1), x_i]$.
 
-  Т.к. $f$ интегрируема, то она ограничена, т.е. $abs(f(x)) lt.eq M space forall x in [a, b].$ Согласно критерию интегрируемости
+  Т.к. $f$ интегрируема, то она ограничена, т.е. $abs(f(x)) <= M space forall x in [a, b].$ Согласно критерию интегрируемости
 
   $ limits(lim)_(d -> 0) limits(sum)_(i = 1)^n omega_i Delta x_i = 0 $
 
   Определим функцию $g(x)$: на каждом из отрезков $[x_(i - 1), x_i]$ функция $g(x)$ является линейной, принимающей заданные значения в точках $x_0 = a$ и $x_n = b$ и значения $g(x_i) = f(x_i)$ при $i = 1,..., n - 1$. Очевидно $g(x)$ непрерывна на $[a, b]$, и на каждом $[x_(i - 1), x_i]$, $i = 2,..., n - 1$, справедливо неравенство
 
-  $ abs(f(x) - g(x)) lt.eq omega_i $
+  $ abs(f(x) - g(x)) <= omega_i $
 
   откуда
 
-  $ (f(x) - g(x))^2 lt.eq (abs(f(x)) + abs(g(x)))^2 abs(f(x) - g(x)) lt.eq 2 M omega_i. $
+  $ (f(x) - g(x))^2 <= (abs(f(x)) + abs(g(x)))^2 abs(f(x) - g(x)) <= 2 M omega_i. $
 
   На отрезках $[x_0, x_1]$, $[x_n-1, x_n]$ имеем
 
-  $ (f(x) - g(x))^2 lt.eq (abs(f(x)) + abs(g(x)))^2 lt.eq (M + M_1)^2, $
+  $ (f(x) - g(x))^2 <= (abs(f(x)) + abs(g(x)))^2 <= (M + M_1)^2, $
 
   где $M_1 = max (M, abs(g(a)), abs(g(b)))$. Поэтому
 
   $
-    limits(integral)_a^b (f(x) - g(x))^2 d x = limits(sum)_(i = 1)^n limits(integral)_(x_(i - 1))^(x_i) (f(x) - g(x))^2 d x lt.eq\
-    lt.eq 2 M limits(sum)_(i = 2)^(n - 1) omega_i Delta x_i + 2 (M + M_1)^2 d.
+    limits(integral)_a^b (f(x) - g(x))^2 d x = limits(sum)_(i = 1)^n limits(integral)_(x_(i - 1))^(x_i) (f(x) - g(x))^2 d x <=\
+    <= 2 M limits(sum)_(i = 2)^(n - 1) omega_i Delta x_i + 2 (M + M_1)^2 d.
   $
 
   Правая часть неравенства стремится к нулю при $d -> 0$. Следовательно, $forall epsilon > 0$ надеятся такое разбиение $P$ отрезка $[a, b]$, что

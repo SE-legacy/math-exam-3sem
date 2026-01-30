@@ -42,8 +42,8 @@
   Опираясь на неравенства (@eq:eq53) и (@eq:eq54), получим оценку
 
   $
-    abs(phi (t) - P (t)) = abs((phi (t) - T_epsilon (t)) + (T_epsilon (t) - P (t))) lt.eq\
-    lt.eq abs(phi (t) - T_epsilon (t)) + abs(T_epsilon (t) - P (t)) < epsilon/2 + epsilon/2 = epsilon,
+    abs(phi (t) - P (t)) = abs((phi (t) - T_epsilon (t)) + (T_epsilon (t) - P (t))) <=\
+    <= abs(phi (t) - T_epsilon (t)) + abs(T_epsilon (t) - P (t)) < epsilon/2 + epsilon/2 = epsilon,
   $
 
   справедливую $forall t in [0, pi]$. Положим теперь

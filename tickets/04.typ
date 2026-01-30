@@ -4,7 +4,7 @@
   Пусть в некоторой области $G$, целиком содержащей дважды непрерывно дифференцируемую поверхность $Phi$, заданы непрерывно дифференцируемые функции $P$, $Q$, $R$. $Phi$ и $L = partial Phi$ согласованы по правилу штопора $==>$
   #equ($
     limits(integral.double)_Phi ((partial R)/(partial y) - (partial Q)/(partial z)) d y d z + ((partial P)/(partial z) - (partial R)/(partial x)) d z d x + ((partial Q)/(partial x) - (partial P)/(partial y) d x d y).
-  $, id: <eq:25>)
+  $, id: <eq:eq25>)
 ][
 	Докажем, что
 	$ limits(integral.cont)_L P d x = limits(integral.double)_Phi (partial P)/(partial z) d x d z - limits(integral.double)_Phi (partial P)/(partial y) d x d y. $
@@ -27,7 +27,7 @@
 ]
 
 #definition(name: "Замечание")[
-  Формулу (@eq:25), называемой *формулой Стокса*, можно записать в более удобной для запоминания в форме:
+  Формулу (@eq:eq25), называемой *формулой Стокса*, можно записать в более удобной для запоминания в форме:
 
   $
     limits(integral.cont)_L P d x + Q d y + R d z = limits(integral.double)_Phi mat(delim: "|",

@@ -42,7 +42,14 @@
   Если $f in R_(2pi)$, то для любого $a in RR$
 
   $ limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
-][]
+][
+  $ limits(integral)_a^(a+2pi) f(x) d x = limits(integral)_a^0 f(x) d x + limits(integral)_0^(2pi) f(x) d x + limits(integral)_(2pi)^(a+2pi) f(x) d x. $
+
+  Сделаем в последнем интеграле замену, положив $x = t + 2pi$,
+
+  $ limits(integral)_(2pi)^(a+2pi) f(x) d x = limits(integral)_0^a f(t + 2pi) d t = - limits(integral)_a^0 f(t) d t ==> \
+  limits(integral)_a^(a + 2pi) f(x) d x = limits(integral)_0^(2pi) f(x) d x. $
+]
 
 #theorem()[
   Если $2 pi$-периодическая функция $f$ разлагается в равномерно сходящийся ряд (@eq:eq29), то его коэффициенты вычисляются по формулам
@@ -52,4 +59,10 @@
     a_n = 1/pi limits(integral)_(-pi)^pi f(x) cos n x d x, "  "
     b_n = 1/pi limits(integral)_(-pi)^pi f(x) sin n x d x.
   $
-][]
+][
+  Для доказательства первого равенства нужно почленно проинтегрировать ряд (@eq:eq29).
+
+  Умножив обе части равенства (@eq:eq29) на $cos n x$ (от этого равномерная сходимость ряда не нарушится) и почленно проинтегрировав, используя теорему об ортогональности тригонометрической системы, получим равенство для коэффициентов $a_n$.
+
+  Аналогично получаем равенство для коэффициентов $b_n$.
+]

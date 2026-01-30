@@ -1,19 +1,24 @@
 #import "../functions.typ": consequence, definition, lets, theorem
 = Среднее квадратичное отклонение, теорема о наилучшем приближении и неравенство Бесселя
 
-#definition[$(f_n)$ сходится в среднем к $f$ на $[a, b]$ $<==>^(d f)$ $limits(lim)_(n -> infinity) limits(integral)_a^b (f_n(x) - f(x))^2 d x = 0$]
+#definition[
+  Функции $f$ и $f_n$, $n in NN$, интегрируемы на $[a, b]$. Говорят, что последовательность $(f_n)$ сходится в среднем к функции $f$ на $[a, b]$, если
 
-#theorem(name: [Теорема  наилучшем приближении])[
-  #lets $T_n$ --- множество тригонометрических многочленов порядка $n$, $r_n (x, T)$ --- среднее квадратическое отклонение $T(x)$ от $f(x)$,
+  $ limits(lim)_(n -> infinity) limits(integral)_a^b (f_n (x) - f(x))^2 d x = 0. $
+]
 
-  $S_n (x) = a_0/2 + limits(sum)_(k = 1)^n (a_k cos k x + b_k sin x k)$ --- $n$-ая частная сумма Фурье.
+#theorem(name: "Теорема (о наилучшем приближении)")[
+  Пусть функция $f$ интегрируема на отрезке $[-pi, pi]$. Тогда среди всех тригонометрических многочленов порядка, не выше $n$, наименьшее среднее квадратическое отклонение от функции $f$ имеет $n$-ая частная сумма ее ряда Фурье
 
-  $f in Re_[-pi, pi] => r_n (x, S_n) = limits(min)_(T in T_n) r_n (x, T)$, причём
+  $ S_n (x) = a_0/2 + limits(sum)_(k = 1)^n (a_k cos k x + b_k sin x k), $
+
+  причем
+
   $
-    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)]
+    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)].
   $
 ][
-  Рассмотрим произвольный тригонометрический многочлен порядка не выше $n$.
+  Рассмотрим произвольный тригонометрический многочлен порядка не выше $n$
 
   $
     T_n (x) = p_0/2 + limits(sum)_(k=1)^n (p_k cos k x + q_k sin k x)
@@ -54,8 +59,7 @@
     = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2 / 2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)] +\
     + [a_0^2 / 2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2) - a_0 p_0 - 2 limits(sum)_(k=1)^n
       (a_k p_k + b_k q_k) + p_0^2 / 2 + limits(sum)_(k=1)^n (p_k^2 + q_k^2)] =\
-    = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)] +\
-    + [(a_0 - p_0)^2 / 2 + limits(sum)_(k=1)^n (a_k - p_k)^2 + limits(sum)_(k=1)^n (b_k - q_k)^2].
+    = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)] + [(a_0 - p_0)^2 / 2 + limits(sum)_(k=1)^n (a_k - p_k)^2 + limits(sum)_(k=1)^n (b_k - q_k)^2].
   $
 
   Осталось заметить, что величина $r_n (x)$ минимальная, если выражение
@@ -75,11 +79,14 @@
   $
 ]
 
-#consequence(name: "Неравенство Бесселя")[
-  $f in Re_[-pi, pi] => a_0^2/2 + limits(sum)_(k = 1)^infinity (a_K^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x$
+#consequence(name: "Следствие (неравенство Бесселя)")[
+  Если $f in Re_[-pi, pi]$, то
+
+  $ a_0^2/2 + limits(sum)_(k = 1)^infinity (a_K^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x. $
 ][
   $
-    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x >= 0 => forall n in NN space space a_0^2/2 + limits(sum)_(k = 1)^n (a_k^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x
+    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x >= 0 ==> \
+    forall n in NN " " a_0^2/2 + limits(sum)_(k = 1)^n (a_k^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x.
   $
   Осталось перейти к пределу при $n -> infinity$.
 ]

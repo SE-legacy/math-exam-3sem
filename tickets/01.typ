@@ -36,9 +36,9 @@
       #box[
         #v(5pt)
         $
-          [frac(D(x\, y), D(u\, v)) != 0] or
-          [frac(D(y\, z), D(u\, v)) != 0] or
-          [frac(D(z\, x), D(u\, v)) != 0]
+          [D(x\, y) / D(u\, v) != 0] or
+          [D(y\, z) / D(u\, v) != 0] or
+          [D(z\, x) / D(u\, v) != 0]
         $
       ]
     ]

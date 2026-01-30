@@ -1,7 +1,7 @@
 #import "../functions.typ": consequence, definition, lets, theorem
 = Среднее квадратичное отклонение, теорема о наилучшем приближении и неравенство Бесселя
 
-#definition[$(f_n)$ сходится в среднем к $f$ на $[a, b]$ $<==>^(d f)$ $limits(lim)_(n -> infinity) limits(integral)_a^b (f_n(x) - f(x))^2 dif x = 0$]
+#definition[$(f_n)$ сходится в среднем к $f$ на $[a, b]$ $<==>^(d f)$ $limits(lim)_(n -> infinity) limits(integral)_a^b (f_n(x) - f(x))^2 d x = 0$]
 
 #theorem(name: [Теорема  наилучшем приближении])[
   #lets $T_n$ --- множество тригонометрических многочленов порядка $n$, $r_n (x, T)$ --- среднее квадратическое отклонение $T(x)$ от $f(x)$,
@@ -10,7 +10,7 @@
 
   $f in Re_[-pi, pi] => r_n (x, S_n) = limits(min)_(T in T_n) r_n (x, T)$, причём
   $
-    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 dif x = 1/pi limits(integral)_(-pi)^pi f^2 (x) dif x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)]
+    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x = 1/pi limits(integral)_(-pi)^pi f^2 (x) d x - [a_0^2/2 + limits(sum)_(k=1)^n (a_k^2 + b_k^2)]
   $
 ][
   Рассмотрим произвольный тригонометрический многочлен порядка не выше $n$.
@@ -76,10 +76,10 @@
 ]
 
 #consequence(name: "Неравенство Бесселя")[
-  $f in Re_[-pi, pi] => a_0^2/2 + limits(sum)_(k = 1)^infinity (a_K^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) dif x$
+  $f in Re_[-pi, pi] => a_0^2/2 + limits(sum)_(k = 1)^infinity (a_K^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x$
 ][
   $
-    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 dif x >= 0 => forall n in NN space space a_0^2/2 + limits(sum)_(k = 1)^n (a_k^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) dif x
+    1/pi limits(integral)_(-pi)^pi (f(x)-S_n (x))^2 d x >= 0 => forall n in NN space space a_0^2/2 + limits(sum)_(k = 1)^n (a_k^2 + b_k^2) <= 1/pi limits(integral)_(-pi)^pi f^2 (x) d x
   $
   Осталось перейти к пределу при $n -> infinity$.
 ]

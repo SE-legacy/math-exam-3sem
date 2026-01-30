@@ -7,7 +7,7 @@
 )[
   Пусть функция $f in R_(2 pi)$. Если при некотором фиксированом $x$ сходится интеграл
 
-  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/t d t, $, id: <eq:eq40>)
+  #equ($ limits(integral)_0^pi (abs(f(x + t) + f(x - t) - 2 A))/t d t, $, id: <eq:eq40>)
 
   где $A$ --- некоторое число, то в этой точке $x$ ряд Фурье функции $f$ сходится и имеет своей суммой число $A$.
 ][
@@ -17,11 +17,11 @@
 
   Если сходится интеграл
 
-  $ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/(t) d t, $
+  $ limits(integral)_0^pi (abs(f(x + t) + f(x - t) - 2 A))/(t) d t, $
 
   то сходится интеграл
 
-  $ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 A|)/(2 sin t/2) d t $
+  $ limits(integral)_0^pi (abs(f(x + t) + f(x - t) - 2 A))/(2 sin t/2) d t $
 
   (так как $sin t/2space ~ space t/2$ при $t -> 0$). Тогда, согласно обобщению теоремы Римана-Лебега, имеем
 
@@ -43,7 +43,7 @@
 ][
   Согласно признаку Дини нам следует доказать сходимость интеграла
 
-  #equ($ limits(integral)_0^pi (|f(x + t) + f(x - t) - 2 f(x)|)/(t) d t, $, id: <eq:eq41>)
+  #equ($ limits(integral)_0^pi (abs(f(x + t) + f(x - t) - 2 f(x)))/(t) d t, $, id: <eq:eq41>)
 
   Точка $t = 0$ является единственной особой точкой для этого интеграла. Имеем
 

@@ -23,4 +23,4 @@ $ C = C (u, v) = (D(x, y))/(D(u, v)) $
   $
 3. $Phi$ разбита на n частей $Phi_k subset Phi, k = overline("1,n")$ без общих внутренних точек $=>$
   $ integral.double_Phi R(x, y, z) d x d y = sum_(k = 1)^n integral.double_Phi_k R (x, y, z) d x d y $
-4. $Phi$ --- цилиндрическая поверхность, образующая $|| O z => integral.double_Phi R(x, y, z) d x d y = 0$
+4. $Phi$ --- цилиндрическая поверхность, образующая которой параллельна оси $O z$, тогда $integral.double_Phi R(x, y, z) d x d y = 0$

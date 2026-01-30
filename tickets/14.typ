@@ -15,7 +15,7 @@ $ lim_(n -> infinity) sigma_n (x) = S $
 ][
   Пусть $epsilon > 0$. Тогда $exists delta > 0$ такое, что при всех $t in (0, delta)$ выполняется неравенство
 
-  $ |(f(x + t) + f(x - t))/(2) - S| < epsilon $
+  $ abs((f(x + t) + f(x - t))/(2) - S) < epsilon $
 
   Тогда, используя равенства:
 
@@ -28,21 +28,21 @@ $ lim_(n -> infinity) sigma_n (x) = S $
   получим оценку
   
   $
-    | sigma_n (x) - S | lt.eq 1/pi limits(integral)_0^pi | f(x + t) + f(x - t) - 2 S | Ф_n (t) d t =\
-    = 1/pi limits(integral)_0^delta | f(x + t) + f(x - t) - 2 S | Ф_n (t) d t + 1/pi limits(integral)_delta^pi | f(x + t) + f(x - t) - 2 S | Ф_n (t) d t lt.eq\
-    lt.eq 1/pi 2 epsilon limits(integral)_0^pi Ф_n (t) d t + 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi | f(x + t) + f(x - t) - 2 S | d t =\
-    = epsilon + 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi | f(x + t) + f(x - t) - 2 S | d t.
+    abs(sigma_n (x) - S) lt.eq 1/pi limits(integral)_0^pi abs(f(x + t) + f(x - t) - 2 S) Ф_n (t) d t =\
+    = 1/pi limits(integral)_0^delta abs(f(x + t) + f(x - t) - 2 S) Ф_n (t) d t + 1/pi limits(integral)_delta^pi abs(f(x + t) + f(x - t) - 2 S) Ф_n (t) d t lt.eq\
+    lt.eq 1/pi 2 epsilon limits(integral)_0^pi Ф_n (t) d t + 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi abs(f(x + t) + f(x - t) - 2 S) d t =\
+    = epsilon + 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi abs(f(x + t) + f(x - t) - 2 S) d t.
   $
 
   Поскольку интеграл
 
-  $ limits(integral)_0^pi | f(x + t) + f(x - t) - 2 S | d t $
+  $ limits(integral)_0^pi abs(f(x + t) + f(x - t) - 2 S) d t $
 
   представляет собой конкретное конечное число, то найдется номер $n_epsilon$ такой, что при всех $n > n_epsilon$ выполняется неравенство
 
-  $ 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi | f(x + t) + f(x - t) - 2 S | d t < epsilon $
+  $ 1/(pi 2 (n + 1) sin^2 delta/2) limits(integral)_0^pi abs(f(x + t) + f(x - t) - 2 S) d t < epsilon $
 
   Тогда окончательно имеем
 
-  $ | sigma_n (x) - S | < 2 epsilon, space forall n > n_epsilon$.
+  $ abs(sigma_n (x) - S) < 2 epsilon, space forall n > n_epsilon$.
 ]

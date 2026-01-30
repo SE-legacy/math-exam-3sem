@@ -5,7 +5,7 @@
 	name: "Теорема (первая теорема Вейерштрасса)",
 	breakline: true
 )[
-  Если функция $f$ определена и непрерывна на отрезке $[a,b]$, то для любого $epsilon > 0$ найдется алгебраический многчлен $P_epsilon$ такой, что при всех $x in [a,b]$ выполняется неравенство $|f (x) - P_epsilon (x)| < epsilon$.
+  Если функция $f$ определена и непрерывна на отрезке $[a,b]$, то для любого $epsilon > 0$ найдется алгебраический многчлен $P_epsilon$ такой, что при всех $x in [a,b]$ выполняется неравенство $abs(f(x) - P_epsilon (x)) < epsilon$.
 ][
   Построим функцию
 
@@ -23,7 +23,7 @@
 
   Пусть $epsilon > 0$. Тогда найдется тригонометрический многочлен $T_epsilon$ такой, что $forall t in RR$ выполняется неравенство
 
-  #equ($ | phi (t) - T_epsilon (t) | < epsilon/2. $, id: <eq:eq53>)
+  #equ($ abs(phi(t) - T_epsilon (t)) < epsilon/2. $, id: <eq:eq53>)
 
   Тригонометрический многочлен разлагается в степенной ряд
 
@@ -31,7 +31,7 @@
 
   с бесконечным радиусом сходимости. На отрезке $[0, pi]$ (как и на любом другом отрезке) ряд сходится равномерно. Поэтому $exists n in NN$, что $forall t in [0, pi]$ выполняется неравенство
 
-  #equ($ | T_epsilon (t) - limits(sum)_(k = 1)^n a_k t^k | < epsilon/2. $, id: <eq:eq54>)
+  #equ($ abs(T_epsilon (t) - limits(sum)_(k = 1)^n a_k t^k) < epsilon/2. $, id: <eq:eq54>)
 
   Обозначим 
 
@@ -42,8 +42,8 @@
   Опираясь на неравенства (@eq:eq53) и (@eq:eq54), получим оценку
 
   $
-    | phi (t) - P (t) | = | (phi (t) - T_epsilon (t)) + (T_epsilon (t) - P (t)) | lt.eq\
-    lt.eq | phi (t) - T_epsilon (t) | + | T_epsilon (t) - P (t) | < epsilon/2 + epsilon/2 = epsilon,
+    abs(phi (t) - P (t)) = abs((phi (t) - T_epsilon (t)) + (T_epsilon (t) - P (t))) lt.eq\
+    lt.eq abs(phi (t) - T_epsilon (t)) + abs(T_epsilon (t) - P (t)) < epsilon/2 + epsilon/2 = epsilon,
   $
 
   справедливую $forall t in [0, pi]$. Положим теперь
@@ -56,5 +56,5 @@
 
   то окончательно имеем неравенство
 
-  $ | f (x) - P_epsilon (x) | < epsilon, space forall x in [a, b]. $
+  $ abs(f (x) - P_epsilon (x)) < epsilon, space forall x in [a, b]. $
 ]

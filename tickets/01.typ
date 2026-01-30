@@ -1,5 +1,9 @@
+#import "../functions.typ": definition
+
 = Гладкая поверхность. Ориентация поверхности. Площадь поверхности
-/ Гладкая поверхность --- это поверхность, для которой выполняются три условия:
+#definition()[
+Гладкая поверхность --- это поверхность, для которой выполняются три условия:
+
 #set box(baseline: 50%)
 #math.cases(
 	[
@@ -40,24 +44,26 @@
 	]
 )
 
-/ Ориентация поверхноссти: --- выбор стороны поверхности с помощью параметеризации
-
+#definition()[
+  Ориентация поверхности --- выбор стороны поверхности с помощью параметеризации.
+]
 
 == Площадь поверхности
 
 Для простоты рассуждений предложим, что плоское мно-во $D$ есть замкнутый квадрат со сторонами, параллельными осям координат. Построим размбиение $T$ квадрата $D$ на равные квадраты $D_(k,l)$, $k,l = 1,...,n$, со стороной $h (mu (D_(k,l))) = h^2$. Пусть точка $(u_(k,l), v_(k,l))$ --- левая нижняя вершина квадрата $D_(k,l)$.
 
-Заменим отображение $Delta overline(r) = overline(r)(u,v) - overline(r)(u_(k,l),v_(k,l))$ дифференциалом $d overline(r)(u_(k,l),v_(k,l))$. Тогда образом квадрата $D_(k,l)$будет парллелограм с вершиной в точке $overline(r)(u_(k,l),v_(k,l))$, построенный на векторах $overline(r)_u^' (u_(k,l),v_(k,l))h$ и $overline(r)_v^' (u_(k,l),v_(k,l))h$. Площадь этого параллелограмма равна модулю векторного произведения
+Заменим отображение $Delta overline(r) = overline(r)(u,v) - overline(r)(u_(k,l),v_(k,l))$ дифференциалом $d overline(r)(u_(k,l),v_(k,l))$. Тогда образом квадрата $D_(k,l)$будет парллелограм с вершиной в точке $overline(r)(u_(k,l),v_(k,l))$, построенный на векторах $overline(r)'_u (u_(k,l),v_(k,l))h$ и $overline(r)'_v (u_(k,l),v_(k,l))h$. Площадь этого параллелограмма равна модулю векторного произведения
 
 $
-|overline(r)_u^' (u_(k,l),v_(k,l))h times overline(r)_v^' (u_(k,l),v_(k,l))h| = |overline(r)_u^' (u_(k,l),v_(k,l)) times overline(r)_v^' (u_(k,l),v_(k,l))| h^2 =\
-= |overline(r)_u^' (u_(k,l),v_(k,l)) times overline(r)_v^' (u_(k,l),v_(k,l))| mu (D_(k,l)) $
+  abs(overline(r)'_u (u_(k,l),v_(k,l))h times overline(r)'_v (u_(k,l),v_(k,l))h) = abs(overline(r)'_u (u_(k,l),v_(k,l)) times overline(r)'_v (u_(k,l),v_(k,l))) h^2 =\
+= abs(overline(r)'_u (u_(k,l),v_(k,l)) times overline(r)'_v (u_(k,l),v_(k,l))) mu (D_(k,l)). $
 
 Построим сумму
 
 $
-sigma (T) = limits(sum)_(k = 1)^n limits(sum)_(k = 1)^n |overline(r)_u^' (u_(k,l),v_(k,l)) times overline(r)_v^' (u_(k,l),v_(k,l))| mu (D_(k,l))
+  sigma (T) = limits(sum)_(k = 1)^n limits(sum)_(k = 1)^n abs(overline(r)'_u (u_(k,l),v_(k,l)) times overline(r)'_v (u_(k,l),v_(k,l))) mu (D_(k,l)).
 $
-// / Площадь поверхности $S$: задаётся формулой
-// $ S = lim_(h arrow.r 0) sigma(T), text("где") $
-// $ sigma(T) = sum_(l = 0)^n sum_(k = 0)^n | r'_u (u_l, v_k) times r'_v (u_l, v_k) | mu(D_(l, k)) $
+
+#definition()[
+  Предел $sigma(T)$ при стремлении диаметра разбиения к нулю $(h -> 0)$ называют *площадью поверхности* $Phi$. Обозначим ее через $S$.
+]

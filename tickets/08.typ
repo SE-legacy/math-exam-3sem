@@ -3,16 +3,14 @@
 
 #theorem(
 	name: "Теорема Дирихле",
-	breakline: true
 )[
-
-Пусть функция $f in R_(2 pi)$. Тогда частная сумма ряда Фурье функции $f$ может быть предствалена в следующем виде
+Пусть функция $f in R_(2 pi)$. Тогда частная сумма ряда Фурье функции $f$ может быть представлена в следующем виде:
 
 #equ($ S_n (x) = 1/pi limits(integral)_0^pi (f(x + t) + f(x - t)) D_n (t) d t, space x in RR, $, id:<fla37>)
 
 где
 
-$ D_n(t) = 1/2 + cos t + cos 2 t + ... + cos n t = (sin (2 n + 1)/2 t)/(2 sin t/2) $
+$ D_n(t) = 1/2 + cos t + cos 2 t + ... + cos n t = (sin (2 n + 1)/2 t)/(2 sin t/2). $
 
 Интеграл в равенстве (@fla37) называют _интегралом Дирихле_.
 ][
@@ -37,15 +35,13 @@ $ D_n(t) = 1/2 + cos t + cos 2 t + ... + cos n t = (sin (2 n + 1)/2 t)/(2 sin t/
 
   $
   S_n(x) = 1/pi limits(integral)_(-pi)^pi f(x + u) (sin (2n + 1)/2 u)/(2 sin u/2) d u =\
-  = 1/pi limits(integral)_(0)^pi f(x + u) (sin (2n + 1)/2 u)/(2 sin u/2) d u + 1/pi limits(integral)_(-pi)^0 f(x + u) (sin (2n + 1)/2 u)/(2 sin u/2) d u =
+  = 1/pi limits(integral)_(0)^pi f(x + u) (sin (2n + 1)/2 u)/(2 sin u/2) d u + 1/pi limits(integral)_(-pi)^0 f(x + u) (sin (2n + 1)/2 u)/(2 sin u/2) d u = (*).
   $
 
-  (сделаем замену переменных во втором интеграле $u = - y$, затем переобозначим переменное $y$ вновь на $u$)
+  Сделаем замену переменных во втором интеграле $u = - y$, затем переобозначим переменное $y$ вновь на $u$.
 
   $
-  = 1/pi limits(integral)_(0)^pi (f(x + u) + f(x - u)) (sin (2n + 1)/2 u)/(2 sin u/2) d u =\
+  (*) = 1/pi limits(integral)_(0)^pi (f(x + u) + f(x - u)) (sin (2n + 1)/2 u)/(2 sin u/2) d u =\
   = 1/pi limits(integral)_(0)^pi (f(x + u) + f(x - u)) D_n (u) d u.
   $
-
-  Таким образом, мы доказали так называемую теорему Дирихле.
 ]

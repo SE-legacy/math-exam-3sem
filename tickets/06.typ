@@ -27,11 +27,11 @@
 ][
   $ limits(integral)_(-pi)^pi 1/2 cos k x d x = 1/(2k) sin k x space #line(end: (0pt, 26pt), stroke: 0.5pt + black)_(space -pi)^(space pi) = 0; \
   limits(integral)_(-pi)^pi 1/2 sin k x d x = - 1/(2k) cos k x space #line(end: (0pt, 26pt), stroke: 0.5pt + black)_(space -pi)^(space pi) = 0; \
-  limits(integral)_(-pi)^pi cos k x cos n x d x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k eq.not n. $
+  limits(integral)_(-pi)^pi cos k x cos n x d x = 1/2 limits(integral)_a^b (cos (k+n) x cos (k-n) x) d x = \ = 1/2 ((sin (k+n) x) / (k+n) + (sin (k-n) x) / (k-n)) space script(#line(end: (0pt, 26pt), stroke: 0.5pt + black))_(space -pi)^(space pi) = 0, space k != n. $
 
   Аналогично
 
-  $ limits(integral)_(-pi)^pi sin k x sin n x d x = limits(integral)_(-pi)^pi sin k x cos n x d x = 0, space k eq.not n. $
+  $ limits(integral)_(-pi)^pi sin k x sin n x d x = limits(integral)_(-pi)^pi sin k x cos n x d x = 0, space k != n. $
 ]
 
 #definition()[

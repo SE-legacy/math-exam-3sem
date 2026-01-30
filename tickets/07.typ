@@ -23,7 +23,7 @@
     2S sin alpha / 2 = sin alpha / 2 + (sin 3/2alpha - sin alpha / 2) + (sin 5/2alpha - sin 3/2 alpha) + dots +\
     + (sin (2n+1)/2 alpha - sin (2n-1)/2 alpha) = sin (2n+1)/2 alpha.
   $
-  Итак, $forall alpha eq.not 2pi k, space k in ZZ:$
+  Итак, $forall alpha != 2pi k, space k in ZZ:$
   $
    S = (sin (2n+1)/2 alpha)/(2sin alpha / 2),
   $
